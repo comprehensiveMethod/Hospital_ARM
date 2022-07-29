@@ -10,7 +10,8 @@ import javax.persistence.*;
 @Data
 public class Client {
     @Id
-    @Column()
+    @Column
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "name", length = 30)
